@@ -1,0 +1,38 @@
+*nudge-lines.txt*        For Vim version 8.0.         Last change: 2020 Sep 14
+
+
+                         Nudge Lines    by S0AndS0
+
+
+Spelling Shortcuts                                               *nudge-lines*
+
+1. Visual Mappings                                    |nudge-lines-visual-map|
+2. Functions                                           |nudge-lines-functions|
+
+==============================================================================
+1. Visual Mappings                                    *nudge-lines-visual-map*
+
+<C-k>                  Nudge visual selection up
+
+<S-K>                  Nudge visual selection up and reformat tabs
+
+<C-j>                  Nudge visual selection down
+
+<S-J>                  Nudge visual selection down and reformat tabs
+
+==============================================================================
+2. Functions                                           *nudge-lines-functions*
+
+                                *Nudge_Selection__Laterally()*
+Nudge_Selection__Laterally({amount} [, {arglist}])
+                        Nudge selected lines up or down by `amount`,
+                        and optionally reformat tabs.
+                        Example, move selection without reformatting: >
+    :'<,'> call Nudge_Selection__Laterally(1)
+<
+                        Example, move selection up with tab reformatting: >
+    :'<,'> call Nudge_Selection__Laterally(-1, 'reformat')
+<
+
+ vim:tw=78:ts=8:ft=help:norl:
+
